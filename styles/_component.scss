@@ -1,0 +1,71 @@
+@use "setting" as set;
+@use "variables"as var;
+
+
+.c-title--l--white{
+color: var.$fontWhite;
+}
+
+.c-title{
+  font-size: clamp(4.2rem, -0.091rem + 21.45vw, 16rem);
+}
+.c-wrapper{
+max-width: 980px;
+
+}
+
+.c-btn{
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.c-btn::after{
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  // background: transparent;
+  color: #000;
+  z-index: 100;
+}
+
+.c-btn--text{
+  position: relative;
+}
+
+.c-btn--text::after{
+  content: "";
+position: absolute;
+bottom: -5px;
+left: 8px;
+background-color: var.$fontBlack;
+width: 85px;
+height: 1px;
+}
+
+.c-btn--text::before {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 80px;
+  background-color: var.$fontBlack;
+  width: 16px;
+  height: 1px;
+  transform: rotate(45deg);
+}
+
+
+.c-title--s{
+ margin-bottom: 40px;
+}
+.c-title--s--en{
+  font-size: clamp(2.4rem, 0.545rem + 9.27vw, 7.5rem);
+  display: block;
+}
+.c-title--s--ja{
+font-size: clamp(1.8rem, 0.709rem + 5.45vw, 4.8rem);
+}

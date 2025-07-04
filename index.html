@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="このページはテストページです。">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- SwiperのCSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- SwiperのJS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+  <div class="back">
+    <header class="header">
+      <h1>
+        <a href="index.html">
+          <img class="header__logo" src="img/back.jpg" alt="ロゴ">
+        </a>
+      </h1>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="header__nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="header__nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="section hero">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img class="swiper-slide__img" src="img/s.jpg" alt="写真1"></div>
+            <div class="swiper-slide"><img class="swiper-slide__img" src="img/s.jpg" alt="写真2"></div>
+            <div class="swiper-slide"><img class="swiper-slide__img" src="img/s.jpg" alt="写真3"></div>
+            <div class="swiper-slide"><img class="swiper-slide__img" src="img/s.jpg" alt="写真4"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about c-wrapper">
+        <h2 class="c-title c-title--l--white about__title">
+          ABOUT
+        </h2>
+        <p class="about__caption">
+          テキストテキストテキストテキストテキスト テキストテキストテキストテキストテキスト
+
+        </p>
+
+
+        <div class="c-btn">
+          <div class="c-btn--text">
+            ABOUT
+          </div>
+        </div>
+      </section>
+
+      <section class="section product">
+        <h2 class="c-title--s">
+          <span class="c-title--s--en"> PRODUCT</span>
+          <spa class="c-title--s--ja">商品名</spa>
+        </h2>
+        <div class="swiper product-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img class="swiper-slide__img" src="img/s.jpg" alt="商品1">
+              <div class="product-info">
+                <div class="product-name">商品名1</div>
+                <div class="product-caption">キャプション1：この商品の説明文が入ります。</div>
+                <div class="product-price">¥1,000</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img class="swiper-slide__img" src="img/s.jpg" alt="商品2">
+              <div class="product-info">
+                <div class="product-name">商品名2</div>
+                <div class="product-caption">キャプション2：この商品の説明文が入ります。</div>
+                <div class="product-price">¥2,000</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img class="swiper-slide__img" src="img/s.jpg" alt="商品3">
+              <div class="product-info">
+                <div class="product-name">商品名3</div>
+                <div class="product-caption">キャプション3：この商品の説明文が入ります。</div>
+                <div class="product-price">¥3,000</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img class="swiper-slide__img" src="img/s.jpg" alt="商品4">
+              <div class="product-info">
+                <div class="product-name">商品名4</div>
+                <div class="product-caption">キャプション4：この商品の説明文が入ります。</div>
+                <div class="product-price">¥4,000</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img class="swiper-slide__img" src="img/s.jpg" alt="商品5">
+              <div class="product-info">
+                <div class="product-name">商品名5</div>
+                <div class="product-caption">キャプション5：この商品の説明文が入ります。</div>
+                <div class="product-price">¥5,000</div>
+              </div>
+            </div>
+          </div>
+          <!-- 必要ならナビゲーションやページネーションも追加可能 -->
+        </div>
+      </section>
+
+
+
+      <section class="section jirei">
+        <div class="jirei__wrapper">
+          <figure class="jirei__left">
+            <h3 class="jirei__leftTitle">
+              商品名
+            </h3>
+            <figcaption class="jirei__leftText">
+              テキストテキストテキストテキストテキスト
+              テキストテキストテキストテキストテキスト
+              テキストテキストテキストテキストテキスト
+            </figcaption>
+
+            <div class="">
+              <img class="jirei__leftImg" src="img/s.jpg" alt="">
+            </div>
+          </figure>
+
+          <figure class="jirei__right">
+            <div class="jirei__rightArea">
+              <h4 class="jirei__rightTitle">
+                商品名
+              </h4>
+              <div class="jirei__rightImgArea">
+                <img class="jirei__rightImg" src="img/s.jpg" alt="">
+              </div>
+              <figcaption class="jirei__rightText">
+                テキストテキストテキストテキストテキスト
+                テキストテキストテキストテキストテキスト
+              </figcaption>
+            </div>
+          </figure>
+
+        </div>
+      </section>
+
+
+
+      <section class="section work">
+        <div class="work__bg"></div>
+        <div class="c-wrapper work__margin">
+
+
+          <div class="work__contentArea">
+            <h2 class="c-title c-title--l--black">
+              WORK
+            </h2>
+            <p class="work__caption">
+              テキストテキストテキストテキテキストテキストテキストテキストテキスト
+              テキストテキストテキストテキストテキストストテキスト
+            </p>
+
+            <div class="work__flex">
+              <div class="work__flex--left">
+                <img src="img/s.jpg" alt="">
+              </div>
+
+              <ul class="work__flex--right">
+                <li class="work__item">
+                  <div class="works__img--s">
+                    <img src="img/s.jpg" alt="">
+                  </div>
+
+                  <div class="work__listArea">
+                    <h3 class="work__listTitle">
+                      商品名
+                    </h3>
+                    <p class="work__listCaption">
+                      テキストテキストテキストテキストテキスト
+                      テキストテキストテキストテキスト
+                    </p>
+                  </div>
+                </li>
+
+                <li class="work__item">
+                  <div class="works__img--s">
+                    <img src="img/s.jpg" alt="">
+                  </div>
+
+                  <div class="work__listArea">
+                    <h3 class="work__listTitle">
+                      商品名
+                    </h3>
+                    <p class="work__listCaption">
+                      テキストテキストテキストテキストテキスト
+                      テキストテキストテキストテキスト
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section news c-wrapper">
+        <h2 class="c-title--s">
+          <span class="c-title--s--en"> NEWS</span>
+          <spa class="c-title--s--ja">お知らせ</spa>
+        </h2>
+
+        <ul class="news__list">
+          <li class="news__item">
+            <h4 class="news__itemTitle">
+              タイトル
+            </h4>
+            <span class="news__category">カテゴリ―</span>
+            <p class="news__text">
+              テキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
+          </li>
+
+          <li class="news__item">
+            <h4 class="news__itemTitle">
+              タイトル
+            </h4>
+            <span class="news__category">カテゴリ―</span>
+            <p class="news__text">
+              テキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
+          </li>
+
+          <li class="news__item">
+            <h4 class="news__itemTitle">
+              タイトル
+            </h4>
+            <span class="news__category">カテゴリ―</span>
+            <p class="news__text">
+              テキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
+          </li>
+        </ul>
+
+        <div class="c-btn">
+          <div class="c-btn--text">
+            NEWS
+          </div>
+      </section>
+  </div>
+
+
+
+  <section class="section contact">
+    <div class="img__bg"></div>
+
+    <svg class="contact__wave" width="1440" height="100" viewBox="0 0 1440 100" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M-490.62 50C-370.37 50 -250.12 41.6667 -129.87 25C110.63 -8.33333 351.13 -8.33333 591.63 25C711.88 41.6667 832.13 50 952.38 50C1072.63 50 1192.88 41.6667 1313.13 25C1553.63 -8.33333 1794.13 -8.33333 2034.63 25C2154.88 41.6667 2275.13 50 2395.38 50L1443 100H0L-490.62 50Z"
+        fill="#797163" />
+    </svg>
+
+    <div class="contact__inner">
+      <h2 class="contact__title">
+        CONTACT US
+      </h2>
+      <p class="contact__text">
+        テキストテキストテキストテキストテキストテキストテキストテキスト
+      </p>
+    </div>
+  </section>
+
+
+  </main>
+
+
+
+
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

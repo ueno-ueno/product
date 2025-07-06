@@ -58,6 +58,7 @@
   height: 20px;
   transition: 1s;
 }
+
 .c-btn:hover::after {
   right: -12%;
   transition: 1s;

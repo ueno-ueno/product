@@ -12,7 +12,6 @@ body {
   letter-spacing: .1em;
   line-height: 1.8;
   font-family: "Roboto", "Noto Sans JP", sans-serif;
-  ;
   color: var.$primaryFontColor;
 }
 
@@ -200,7 +199,6 @@ a:hover {
 }
 
 .swiper-slide {
-  // aspect-ratio: 4/3;
   overflow: hidden;
   border-radius: 50px;
 }
@@ -217,7 +215,6 @@ a:hover {
 .product-swiper .swiper-slide__img {
   aspect-ratio: 1/1;
   border-radius: 50px;
-  // box-shadow: 0 10px 32px rgba(0, 0, 0, 0.18);
 }
 
 .product-info {

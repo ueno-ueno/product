@@ -60,9 +60,6 @@
   width: 85px;
   height: 20px;
   transition: 1s;
-   @include set.mediaQuery(tab) {
-  
-   }
 }
 
 .c-btn:hover::after {
@@ -93,10 +90,10 @@
   font-size: 1.8rem;
 }
 
-.c-btn--tabSize--margin{
- @include set.mediaQuery(sp) {
-  margin-right: 10%;
- }
+.c-btn--tabSize--margin {
+  @include set.mediaQuery(sp) {
+    margin-right: 10%;
+  }
 }
 
 // our worksボタン（位置やホバー時の背景が違う）

@@ -83,7 +83,9 @@ a:hover {
   cursor: pointer;
   padding: 0;
   z-index: 1000;
-  position: relative;
+  position: fixed;
+  top: 20px;
+  right: 20px;
 }
 
 .hamburger-line {
@@ -429,7 +431,7 @@ a:hover {
 }
 
 .work__bg {
-  background-image: url(/img/Rectangle.svg);
+  background-image: url(../img/Rectangle.svg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -609,7 +611,7 @@ a:hover {
 
 
 .img__bg {
-  background-image: url(/img/women01.jpg);
+  background-image: url(../img/women01.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

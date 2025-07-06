@@ -1,71 +1,133 @@
 @use "setting" as set;
-@use "variables"as var;
+@use "variables" as var;
 
-
-.c-title--l--white{
-color: var.$fontWhite;
+.c-wrapper {
+  max-width: 980px;
+  padding: 0 4%;
 }
 
-.c-title{
+.c-title--l--white {
+  color: var.$colorWhite;
+}
+
+.c-title {
   font-size: clamp(4.2rem, -0.091rem + 21.45vw, 16rem);
-}
-.c-wrapper{
-max-width: 980px;
-
+  line-height: 1;
 }
 
-.c-btn{
+.c-title--s {
+  margin-bottom: 40px;
+}
+
+.c-title--s--en {
+  font-size: clamp(2.4rem, 0.545rem + 9.27vw, 7.5rem);
+  display: block;
+  line-height: 1;
+}
+
+.c-title--s--ja {
+  font-size: clamp(1.8rem, 1.364rem + 2.18vw, 3rem);
+}
+
+
+// ボタン
+.c-btn {
   display: flex;
   justify-content: flex-end;
   position: relative;
+  cursor: pointer;
+
+  @include set.mediaQuery(pc) {
+    transform: translateX(-10%);
+  }
+
+  @include set.mediaQuery(tab) {
+    transform: translateX(-15%);
+  }
 }
 
-.c-btn::after{
+// ボタンの矢印
+.c-btn::after {
+  content: "";
+  background-image: url(/img/arrow.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
   position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  // background: transparent;
-  color: #000;
-  z-index: 100;
+  bottom: -23%;
+  right: -9%;
+  transform: translateX(-50%);
+  width: 85px;
+  height: 20px;
+  transition: 1s;
+   @include set.mediaQuery(tab) {
+  
+   }
 }
 
-.c-btn--text{
-  position: relative;
+.c-btn:hover::after {
+  right: -12%;
+  transition: 1s;
 }
 
-.c-btn--text::after{
+// ボタンの円
+.c-btn::before {
   content: "";
-position: absolute;
-bottom: -5px;
-left: 8px;
-background-color: var.$fontBlack;
-width: 85px;
-height: 1px;
-}
-
-.c-btn--text::before {
-  content: "";
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  border: 1px solid var.$primaryFontColor;
+  border-radius: 50px;
   position: absolute;
-  bottom: 2px;
-  left: 80px;
-  background-color: var.$fontBlack;
-  width: 16px;
-  height: 1px;
-  transform: rotate(45deg);
+  right: -10%;
+  transition: 1s;
 }
 
+.c-btn:hover::before {
+  background-color: rgba(var.$colorWhite, .7);
+  transition: 1s;
+  scale: 1.2;
+}
 
-.c-title--s{
- margin-bottom: 40px;
+.c-btn--text {
+  font-size: 1.8rem;
 }
-.c-title--s--en{
-  font-size: clamp(2.4rem, 0.545rem + 9.27vw, 7.5rem);
-  display: block;
+
+.c-btn--tabSize--margin{
+ @include set.mediaQuery(sp) {
+  margin-right: 10%;
+ }
 }
-.c-title--s--ja{
-font-size: clamp(1.8rem, 0.709rem + 5.45vw, 4.8rem);
+
+// our worksボタン（位置やホバー時の背景が違う）
+.c-btn--work {
+  position: absolute;
+  bottom: 13%;
+  right: 19%;
+  z-index: 200;
+
+  @include set.mediaQuery(tab) {
+    bottom: 5%;
+  }
+}
+
+.c-btn--work::after {
+  right: -70%;
+}
+
+.c-btn--work:hover::after {
+  right: -80px;
+}
+
+.c-btn--work::before {
+  right: -80%;
+}
+
+.c-btn--work:hover::before {
+  background-color: rgba(var.$primaryColor, 0.7);
+
+  @include set.mediaQuery(pc) {
+    background-color: rgba(var.$colorWhite, .7);
+
+  }
 }

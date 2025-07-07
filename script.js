@@ -1,4 +1,4 @@
-'use strict'
+// 'use strict'
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -81,18 +81,6 @@ document.addEventListener('click', function(e) {
   }
 });
 
-  // gsap.registerPlugin(ScrollTrigger);
-  // gsap.to(".img-cover", {
-  //   scaleX: 0,
-  //   scrollTrigger: {
-  //     trigger: ".jirei__leftImgArea",
-  //     start: "top 80%",
-  //     toggleActions: "play none none none"
-  //   },
-  //   transformOrigin: "left",
-  //   duration: 1,
-  //   ease: "power2.out"
-  // });
 
 // トップへ戻るボタンの表示・動作
 const toTopBtn = document.getElementById('toTopBtn');

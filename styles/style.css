@@ -623,7 +623,6 @@ a:hover {
 
 .works__img--s {
   margin-right: 16px;
-  height: 100%;
   width: 50%;
   border-radius: 50px;
   overflow: hidden;
@@ -633,10 +632,11 @@ a:hover {
 @media screen and (max-width: 980px) {
   .works__img--s {
     width: 100%;
+    height: auto;
   }
 }
 .works__img--s img {
-  height: 100%;
+  height: auto;
   object-fit: cover;
   transition: 1s;
 }
@@ -823,6 +823,12 @@ a:hover {
   z-index: 1000;
   opacity: 0;
 }
+@media screen and (max-width: 980px) {
+  .to-top-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
 
 .to-top-btn::before {
   content: "";
@@ -835,6 +841,13 @@ a:hover {
   border-left: 1px solid #66645F;
   border-bottom: 1px solid #66645F;
   transform: rotate(135deg) translateY(2px);
+}
+@media screen and (max-width: 980px) {
+  .to-top-btn::before {
+    width: 10px;
+    height: 10px;
+    left: 42%;
+  }
 }
 
 .to-top-btn.show {

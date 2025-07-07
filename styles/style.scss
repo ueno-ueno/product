@@ -524,7 +524,6 @@ a:hover {
 
 .works__img--s {
   margin-right: 16px;
-  height: 100%;
   width: 50%;
   border-radius: 50px;
   overflow: hidden;
@@ -533,10 +532,11 @@ a:hover {
 
   @include set.mediaQuery(tab) {
     width: 100%;
+    height: auto;
   }
 
   img {
-    height: 100%;
+    height: auto;
     object-fit: cover;
     transition: 1s;
 
@@ -727,6 +727,11 @@ a:hover {
   transition: opacity 0.4s, box-shadow 0.3s, transform 0.3s;
   z-index: 1000;
   opacity: 0;
+
+  @include set.mediaQuery(tab) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .to-top-btn::before {
@@ -740,6 +745,12 @@ a:hover {
   border-left: 1px solid var.$primaryFontColor;
   border-bottom: 1px solid var.$primaryFontColor;
   transform: rotate(135deg) translateY(2px);
+
+  @include set.mediaQuery(tab) {
+    width: 10px;
+    height: 10px;
+    left: 42%;
+  }
 }
 
 .to-top-btn.show {

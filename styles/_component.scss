@@ -10,13 +10,19 @@
   color: var.$colorWhite;
 }
 
+.c-title--l--black {
+  color: rgba(var.$primaryFontColor, 0.7);
+}
+
 .c-title {
   font-size: clamp(4.2rem, -0.091rem + 21.45vw, 16rem);
   line-height: 1;
+  font-weight: 700;
 }
 
 .c-title--s {
   margin-bottom: 40px;
+  color: rgba(var.$primaryFontColor, 0.8);
 }
 
 .c-title--s--en {
@@ -73,21 +79,25 @@
   width: 80px;
   height: 80px;
   background-color: transparent;
-  border: 1px solid var.$primaryFontColor;
+  border: 1px solid rgba(var.$primaryFontColor, 0.7);
   border-radius: 50px;
   position: absolute;
   right: -10%;
-  transition: 1s;
+  transition: 2s;
 }
 
 .c-btn:hover::before {
   background-color: rgba(var.$colorWhite, .7);
   transition: 1s;
   scale: 1.2;
+  border: none;
+  transition: 2s;
 }
 
 .c-btn--text {
   font-size: 1.8rem;
+  z-index: 1000;
+  color: rgba(var.$primaryFontColor, 0.8);;
 }
 
 .c-btn--tabSize--margin {
@@ -103,7 +113,7 @@
   right: 19%;
   z-index: 200;
 
-  @include set.mediaQuery(tab) {
+  @include set.mediaQuery(pc) {
     bottom: 5%;
   }
 

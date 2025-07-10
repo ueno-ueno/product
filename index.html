@@ -15,12 +15,11 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/phf8gfp.css">
   <!-- SwiperのCSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- SwiperのJS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- ここを追加：Font Awesome CDN
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> -->
 </head>
 
 <body>
@@ -28,14 +27,14 @@
     <header class="header">
       <h1>
         <a href="index.html">
-          <img class="header__logo" src="img/back.jpg" alt="ロゴ">
+          <img class="header__logo--img" src="img/logo.png" alt="ロゴ">
         </a>
       </h1>
       <nav class="header__nav">
         <ul class="header__nav-list">
-          <li class="header__nav-item"><a href="#vision" class="nav-link">Our Vision</a></li>
-          <li class="header__nav-item"><a href="#item" class="nav-link">ITEM</a></li>
-          <li class="header__nav-item"><a href="#works" class="nav-link">Works</a></li>
+          <li class="header__nav-item"><a href="#vision" class="nav-link">ABOUT</a></li>
+          <li class="header__nav-item"><a href="#item" class="nav-link">PRODUCT</a></li>
+          <li class="header__nav-item"><a href="#works" class="nav-link">WORK</a></li>
           <li class="header__nav-item"><a href="#news" class="nav-link">NEWS</a></li>
           <li class="header__nav-item"><a href="#contact" class="nav-link">CONTACT</a></li>
         </ul>
@@ -62,7 +61,7 @@
 
       <section id="vision" class="section about c-wrapper">
         <h2 class="c-title c-title--l--white about__title">
-          Our Vision
+          ABOUT
         </h2>
         <p class="about__caption">
           私たちは、お客様の個性を輝かせる美しいアクセサリーを提供し、特別な瞬間をより輝かせます。
@@ -78,8 +77,8 @@
 
       <section id="item" class="section product">
         <h2 class="c-title--s">
-          <span class="c-title--s--en">ITEM</span>
-          <spa class="c-title--s--ja">商品名</spa>
+          <span class="c-title--s--en">PRODUCT</span>
+          <spa class="c-title--s--ja">商品</spa>
         </h2>
         <div class="swiper product-swiper">
           <div class="swiper-wrapper">
@@ -165,7 +164,7 @@
 
         </div>
         <div class="jirei__underImgArea">
-          <img class="jirei__underImg" src="img/05.jpg" alt="">
+          <div class="jirei__underImg"></div>
         </div>
       </section>
 
@@ -179,56 +178,45 @@
 
           <div class="work__contentArea">
             <h2 class="c-title c-title--l--black">
-              Works
+              Work
             </h2>
             <p class="work__caption">
               私たちのアクセサリーは、お客様の個性を輝かせ、特別な瞬間をより美しく彩ります。
               高品質な素材と職人の技で作り上げた、一生の宝物となる逸品をお届けします。
             </p>
 
-            <div class="work__flex">
-              <div class="work__flex--left">
-                <img src="img/05.jpg" alt="">
-              </div>
+            <ul class="work__flex">
+              <li class="work__item">
+                <div class="work__itemImgArea">
+                  <img class="work__itemImg work__itemImg--normal" src="img/01.jpg" alt="作品1">
+                  <img class="work__itemImg work__itemImg--hover" src="img/work-01.jpg" alt="作品1詳細">
+                </div>
+                <p class="works__text">
+                  シルバーネックレスの制作工程では、まず925シルバーの素材選びから始まります。
+                  職人が一つひとつ手作業で研磨し、細部まで丁寧に仕上げることで、
+                  上質な輝きと美しいフォルムを実現しています。
+                </p>
+              </li>
 
-              <ul class="work__flex--right">
-                <li class="work__item">
-                  <div class="works__img--s">
-                    <img src="img/06.jpg" alt="">
-                  </div>
+              <li class="work__item">
+                <div class="work__itemImgArea">
+                  <img class="work__itemImg work__itemImg--normal" src="img/05.jpg" alt="作品2">
+                  <img class="work__itemImg work__itemImg--hover" src="img/work-02.jpg" alt="作品2詳細">
+                </div>
+                <p class="">
+                  サファイアペンダントの制作では、天然石の特性を活かした石留め技術が重要です。
+                  職人が熟練の技で石をセットし、光の反射を計算した角度で配置することで、
+                  サファイアの美しい青い輝きを最大限に引き出しています。
+                </p>
+              </li>
+            </ul>
 
-                  <div class="work__listArea">
-                    <h3 class="work__listTitle">
-                      職人仕上げパール
-                    </h3>
-                    <p class="work__listCaption">
-                      厳選パールを手作業で丁寧に仕立てました。
-                    </p>
-                  </div>
-                </li>
-
-                <li class="work__item">
-                  <div class="works__img--s">
-                    <img src="img/03.jpg" alt="">
-                  </div>
-
-                  <div class="work__listArea">
-                    <h3 class="work__listTitle">
-                      手作りダイヤブレス
-                    </h3>
-                    <p class="work__listCaption">
-                      一点一点、手作業で石留めしています。
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
 
         <div class="c-btn c-btn--work">
           <div class="c-btn--text c-btn--text--work">
-            Our Works
+            WORK
           </div>
         </div>
       </section>
@@ -345,9 +333,9 @@
     <span class="to-top-arrow"></span>
   </button>
 
-  <script src="script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

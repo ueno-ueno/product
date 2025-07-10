@@ -2,6 +2,39 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+// // ロゴ文字のドロップインアニメーション（GSAP）
+// function animateLogoLetters() {
+//   console.log('GSAP animation starting...');
+//   const letters = document.querySelectorAll('.logo-letter');
+//   console.log('Found letters:', letters.length);
+  
+//   // まず文字を非表示にする
+//   gsap.set(letters, {
+//     opacity: 0,
+//     y: -50
+//   });
+  
+//   // アニメーション実行
+//   gsap.to(letters, {
+//     opacity: 1,
+//     y: 0,
+//     duration: 0.8,
+//     ease: "back.out(1.7)",
+//     stagger: 0.1,
+//     delay: 0.5
+//   });
+// }
+
+// // ページ読み込み完了後に実行
+// window.addEventListener('load', function() {
+//   console.log('Page loaded, GSAP available:', typeof gsap !== 'undefined');
+//   if (typeof gsap !== 'undefined') {
+//     setTimeout(animateLogoLetters, 1000);
+//   } else {
+//     console.error('GSAP is not loaded');
+//   }
+// });
+
 // ヒーローセクションのSwiper
 const heroSwiper = new Swiper('.section.hero .swiper', {
   loop: true,

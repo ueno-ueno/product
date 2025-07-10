@@ -35,9 +35,10 @@
 
 .c-btn {
   display: flex;
-  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
   position: relative;
-  cursor: pointer;
+  transform: translateX(-15%);
 }
 @media screen and (max-width: 1080px) {
   .c-btn {
@@ -50,27 +51,20 @@
   }
 }
 
-.c-btn::after {
-  content: "";
-  background-image: url(../img/arrow.png);
-  background-position: center center;
-  background-size: contain;
-  background-repeat: no-repeat;
+.c-btn--arrow {
   position: absolute;
-  bottom: -23%;
-  right: -9%;
-  transform: translateX(-50%);
-  width: 85px;
-  height: 20px;
-  transition: 1s;
+  top: 10px;
+  right: -34px;
+  z-index: 2000;
 }
 
-.c-btn:hover::after {
-  right: -12%;
-  transition: 1s;
+.c-btn--text {
+  font-size: 1.8rem;
+  z-index: 1000;
+  color: rgba(102, 100, 95, 0.8);
 }
 
-.c-btn::before {
+.c-btn--text::after {
   content: "";
   width: 80px;
   height: 80px;
@@ -82,7 +76,7 @@
   transition: 2s;
 }
 
-.c-btn:hover::before {
+.c-btn--text:hover::after {
   background-color: rgba(252, 250, 249, 0.7);
   transition: 1s;
   scale: 1.2;
@@ -90,10 +84,14 @@
   transition: 2s;
 }
 
-.c-btn--text {
-  font-size: 1.8rem;
-  z-index: 1000;
-  color: rgba(102, 100, 95, 0.8);
+.c-btn--text:hover + .c-btn--arrow .c-btn--arrowImg {
+  transform: translateX(10px);
+  transition: transform 1s;
+}
+
+.c-btn--arrowImg {
+  transition: 1s;
+  width: 90px;
 }
 
 @media screen and (max-width: 430px) {
@@ -102,42 +100,29 @@
   }
 }
 
-.c-btn--work {
+.work .c-btn {
   position: absolute;
   bottom: 13%;
-  right: 19%;
-  z-index: 200;
+  right: 20%;
+  z-index: 2200;
 }
 @media screen and (max-width: 1080px) {
-  .c-btn--work {
+  .work .c-btn {
     bottom: 5%;
   }
 }
 @media screen and (max-width: 430px) {
-  .c-btn--work {
+  .work .c-btn {
     right: 23%;
   }
 }
 
-.c-btn--work::after {
-  right: -70%;
+.work .c-btn--text::after {
+  right: -140%;
 }
 
-.c-btn--work:hover::after {
-  right: -80px;
-}
-
-.c-btn--work::before {
-  right: -80%;
-}
-
-.c-btn--work:hover::before {
-  background-color: rgba(218, 207, 197, 0.7);
-}
-@media screen and (max-width: 1080px) {
-  .c-btn--work:hover::before {
-    background-color: rgba(252, 250, 249, 0.7);
-  }
+.work .c-btn--text:hover::after {
+  background-color: rgba(218, 207, 197, 0.8);
 }
 
 html {
@@ -402,12 +387,12 @@ a:hover {
   display: inline-block;
   position: absolute;
   top: 50%;
-  left: 40%;
+  right: 10%;
   font-size: clamp(1.6rem, 1.309rem + 1.45vw, 2.4rem);
 }
 @media screen and (max-width: 768px) {
   .about__caption {
-    left: 20%;
+    right: 5%;
   }
 }
 
@@ -615,7 +600,7 @@ a:hover {
 }
 
 .work__caption {
-  margin-bottom: 24px;
+  margin-bottom: 48px;
   font-size: clamp(1.6rem, 1.309rem + 1.45vw, 2.4rem);
   text-align: justify;
 }

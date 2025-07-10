@@ -281,11 +281,11 @@ a:hover {
   display: inline-block;
   position: absolute;
   top: 50%;
-  left: 40%;
+  right: 10%;
   font-size: clamp(1.6rem, 1.309rem + 1.45vw, 2.4rem);
 
   @include set.mediaQuery(tab) {
-    left: 20%;
+    right: 5%;
   }
 }
 
@@ -496,7 +496,7 @@ a:hover {
 }
 
 .work__caption {
-  margin-bottom: 24px;
+  margin-bottom: 48px;
   font-size: clamp(1.6rem, 1.309rem + 1.45vw, 2.4rem);
   text-align: justify;
 }

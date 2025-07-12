@@ -1,0 +1,119 @@
+// お問い合わせフォーム専用スタイル
+.indexContact{
+margin: 0 auto;
+padding: 80px 0;
+}
+
+.indexContact__title{
+text-align: center;
+
+}
+
+.indexContact__form {
+  max-width: 980px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.indexContact__form--item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.indexContact__form--label {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.85);
+  margin-bottom: 4px;
+}
+
+.indexContact__form--required {
+  color: #e74c3c;
+  font-size: 1.2rem;
+  margin-left: 4px;
+}
+
+.indexContact__form--input,
+.indexContact__form--textarea {
+  font-size: 1.6rem;
+  padding: 12px 16px;
+  border: 1px solid #d1bfa7;
+  border-radius: 8px;
+  background: #fff;
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+.indexContact__form--input:focus,
+.indexContact__form--textarea:focus {
+  border-color: #bfa16a;
+  outline: none;
+}
+
+.indexContact__form--textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.indexContact__form--radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.indexContact__form--radio-label {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.indexContact__form--item--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.indexContact__fields--item {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.indexContact__fields--label {
+  width: 40%;
+  max-width: 100%;
+}
+
+.indexContact__fields--input {
+  width: 60%;
+  max-width: 100%;
+
+}
+
+
+
+// ボタンは既存のc-btn, contact__btnを利用
+
+// レスポンシブ
+@media (max-width: 600px) {
+  .indexContact__form {
+    padding: 24px 8px;
+    gap: 20px;
+  }
+
+  .indexContact__form--input,
+  .indexContact__form--textarea {
+    font-size: 1.4rem;
+    padding: 10px 8px;
+  }
+}

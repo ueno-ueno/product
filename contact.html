@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="このページはテストページです。">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/phf8gfp.css">
+  <!-- SwiperのCSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- SwiperのJS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+  <div class="back">
+    <header class="header">
+      <h1>
+        <a href="index.html">
+          <img class="header__logo--img" src="img/logo.png" alt="ロゴ">
+        </a>
+      </h1>
+      <nav class="header__nav">
+        <ul class="header__navList">
+          <li class="header__navItem"><a href="#vision" class="nav-link">ABOUT</a></li>
+          <li class="header__navItem"><a href="#item" class="nav-link">PRODUCT</a></li>
+          <li class="header__navItem"><a href="#works" class="nav-link">WORK</a></li>
+          <li class="header__navItem"><a href="#news" class="nav-link">NEWS</a></li>
+          <li class="header__navItem"><a href="#contact" class="nav-link">CONTACT</a></li>
+        </ul>
+      </nav>
+      <!-- ハンバーガーメニューボタン -->
+      <button class="header__hamburgerMenu" id="hamburgerMenu" aria-label="メニューを開く">
+        <span class="header__hamburgerLine"></span>
+        <span class="header__hamburgerLine"></span>
+        <span class="header__hamburgerLine"></span>
+      </button>
+    </header>
+
+    <main class="main">
+      <section class="section indexContact c-wrapper">
+        <h2 class="c-title--s indexContact__title">
+          <span class="c-title--s--en">contact</span>
+          <spa class="c-title--s--ja">お問合せ</spa>
+        </h2>
+
+        <form class="indexContact__form" action="#" method="post" novalidate>
+          <div class="indexContact__form--item">
+            <label for="name" class="indexContact__form--label">
+              お名前
+              <span class="indexContact__form--required">*</span></label>
+            <input type="text" id="name" name="name" class="indexContact__form--input" required
+              placeholder="お名前を入力してください">
+          </div>
+
+          <div class="indexContact__form--item">
+            <label for="email" class="indexContact-form--label">
+              メールアドレス
+              <span class="indexContact__form--required">*</span></label>
+            <input type="email" id="email" name="email" class="indexContact__form--input" required
+              placeholder="example@mail.com" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+          </div>
+
+          <div class="indexContact__form--item">
+            <span class="indexContact__form--label">お問い合わせ種別
+              <span class="indexContact__form--required">*</span></span>
+
+            <div class="indexContact__form--radio-group">
+              <label class="indexContact__form--radio-label">
+                <input type="radio" name="type" value="web" required>
+                Webサイト制作について</label>
+
+              <ul id="website-fields" class="indexContact__fields">
+                <li class="indexContact__fields--item">
+                  <label class="indexContact__fields--label" for="deadline">ご希望の納期（任意）</label>
+                  <input class="indexContact__fields--input indexContact__form--input" type="text" id="deadline" name="deadline" class="indexContact__form--input"
+                    placeholder="例：2ヶ月以内" />
+                </li>
+                <li class="indexContact__fields--item">
+                  <label class="indexContact__fields--label" for="budget">ご予算感（任意）</label>
+                  <input class="indexContact__fields--input indexContact__form--input" type="text" id="budget" name="budget" class="indexContact__form--input"
+                    placeholder="例：10万円以内" />
+                </li>
+                <li class="indexContact__fields--item">
+                  <label class="indexContact__fields--label" for="reference">参考サイトURL（任意）</label>
+                  <input class="indexContact__fields--input indexContact__form--input" type="url" id="reference" name="reference" class="indexContact__form--input"
+                    placeholder="https://example.com" />
+                </li>
+
+                <li class="indexContact__fields--item">
+                  <label class="indexContact__fields--label">WordPressを希望されますか？</label>
+                  <label><input class=" indexContact__form--input" type="checkbox" name="wordpress" value="yes" /> はい</label>
+                </li>
+              </ul>
+
+              <label class="indexContact__form--radio-label">
+                <input type="radio" name="type" value="maintenance">
+                保守・更新について</label>
+              <label class="indexContact__form--radio-label">
+                <input type="radio" name="type" value="other"> その他</label>
+            </div>
+          </div>
+
+          <div class="indexContact__form--item">
+            <label for="message" class="contact__form--label">メッセージ本文 <span
+                class="indexContact__form--required">*</span></label>
+            <textarea id="message" name="message" class="indexContact__form--textarea" rows="6" required
+              placeholder="ご用件を入力してください"></textarea>
+          </div>
+
+          <div class="indexContact__form--item contact__form--item--center">
+            <button type="submit" class="indexContact__btn">
+              <span class="">送信</span>
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+  </div>
+  <script src="form.js" defer></script>
+</body>
+
+</html>

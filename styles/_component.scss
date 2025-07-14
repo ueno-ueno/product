@@ -23,7 +23,7 @@
 
 .c-title--s {
   margin-bottom: 40px;
-  color: rgba(var.$primaryFontColor, 0.8);
+  color: var.$subFontColor;
 }
 
 .c-title--s--en {
@@ -66,7 +66,7 @@
 .c-btn--text {
   font-size: 1.8rem;
   z-index: 1000;
-  color: rgba(var.$primaryFontColor, 0.8);
+  color: var.$subFontColor;
 }
 
 // ボタンの円
@@ -75,7 +75,7 @@
   width: 80px;
   height: 80px;
   background-color: transparent;
-  border: 1px solid rgba(var.$primaryFontColor, 0.7);
+  border: 1px solid  var.$subFontColor;
   border-radius: 50px;
   position: absolute;
   right: -10%;
@@ -125,7 +125,7 @@
   }
 
   @include set.mediaQuery(sp) {
-    right: 23%;
+    right: 15%;
   }
 }
 
@@ -141,4 +141,41 @@
   @include set.mediaQuery(tab) {
     right: -110%;
   }
+  @include set.mediaQuery(sp) {
+    right: -60%;
+  }
+}
+
+.c-btn--rectangle {
+  display: inline-block;
+  padding: 8px 80px;
+  border-radius: 50px;
+  border: 1px solid var.$primaryColor;
+  color: var.$primaryColor;
+  position: relative;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.c-btn--rectangle:hover {
+  background-color: rgba(var.$subColor, .7);
+  transition: 1s;
+  color: var.$colorBrown;
+}
+
+
+.c-btn--rectangle::after {
+  border: 1px solid var.$primaryColor;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  width: 72px;
+  height: 0.5px;
+  transition: 1s;
+}
+
+.c-btn--rectangle:hover::after {
+  right: -50px;
+  transition: 1s;
 }

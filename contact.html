@@ -26,7 +26,7 @@
 <body>
   <div class="back">
     <header class="header">
-      <h1>
+      <h1 class="header__logoArea">
         <a href="index.html">
           <img class="header__logo--img" src="img/logo.png" alt="ロゴ">
         </a>
@@ -52,78 +52,90 @@
       <section class="section indexContact c-wrapper">
         <h2 class="c-title--s indexContact__title">
           <span class="c-title--s--en">contact</span>
-          <spa class="c-title--s--ja">お問合せ</spa>
+          <span class="c-title--s--ja">お問合せ</span>
         </h2>
 
         <form class="indexContact__form" action="#" method="post" novalidate>
           <div class="indexContact__form--item">
             <label for="name" class="indexContact__form--label">
               お名前
-              <span class="indexContact__form--required">*</span></label>
+            </label>
             <input type="text" id="name" name="name" class="indexContact__form--input" required
               placeholder="お名前を入力してください">
           </div>
 
           <div class="indexContact__form--item">
-            <label for="email" class="indexContact-form--label">
+            <label for="email" class="indexContact__form--label">
               メールアドレス
-              <span class="indexContact__form--required">*</span></label>
+            </label>
             <input type="email" id="email" name="email" class="indexContact__form--input" required
               placeholder="example@mail.com" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
           </div>
 
           <div class="indexContact__form--item">
-            <span class="indexContact__form--label">お問い合わせ種別
-              <span class="indexContact__form--required">*</span></span>
+            <fieldset class="indexContact__form--fieldset">
+              <legend class="indexContact__form--legend">
+                お問い合わせ種別
+              </legend>
 
-            <div class="indexContact__form--radio-group">
-              <label class="indexContact__form--radio-label">
-                <input type="radio" name="type" value="web" required>
-                Webサイト制作について</label>
+              <div class="indexContact__form--radio-group">
+                <div class="indexContact__form--radio-group--flex">
+                  <label class="indexContact__form--radio-label">
+                    <input type="radio" name="type" value="web" required>
+                    オーダーメイドについて</label>
 
-              <ul id="website-fields" class="indexContact__fields">
-                <li class="indexContact__fields--item">
-                  <label class="indexContact__fields--label" for="deadline">ご希望の納期（任意）</label>
-                  <input class="indexContact__fields--input indexContact__form--input" type="text" id="deadline" name="deadline" class="indexContact__form--input"
-                    placeholder="例：2ヶ月以内" />
-                </li>
-                <li class="indexContact__fields--item">
-                  <label class="indexContact__fields--label" for="budget">ご予算感（任意）</label>
-                  <input class="indexContact__fields--input indexContact__form--input" type="text" id="budget" name="budget" class="indexContact__form--input"
-                    placeholder="例：10万円以内" />
-                </li>
-                <li class="indexContact__fields--item">
-                  <label class="indexContact__fields--label" for="reference">参考サイトURL（任意）</label>
-                  <input class="indexContact__fields--input indexContact__form--input" type="url" id="reference" name="reference" class="indexContact__form--input"
-                    placeholder="https://example.com" />
-                </li>
+                  <ul id="website-fields" class="indexContact__fields">
+                    <li class="indexContact__fields--item">
+                      <label class="indexContact__fields--label" for="deadline">ご希望の納期（任意）</label>
+                      <input class="indexContact__fields--input indexContact__form--input" type="text" id="deadline"
+                        name="deadline" placeholder="例：2ヶ月以内" />
+                    </li>
+                    <li class="indexContact__fields--item">
+                      <label class="indexContact__fields--label" for="budget">ご予算感（任意）</label>
+                      <input class="indexContact__fields--input indexContact__form--input" type="text" id="budget"
+                        name="budget" placeholder="例：10万円以内" />
+                    </li>
 
-                <li class="indexContact__fields--item">
-                  <label class="indexContact__fields--label">WordPressを希望されますか？</label>
-                  <label><input class=" indexContact__form--input" type="checkbox" name="wordpress" value="yes" /> はい</label>
-                </li>
-              </ul>
+                    <li class="indexContact__fields--item">
+                      <label class="indexContact__fields--label">ペアを希望されますか？</label>
+                      <label><input class=" indexContact__form--input" type="checkbox" name="wordpress" value="yes" />
+                        はい</label>
+                    </li>
+                  </ul>
+                </div>
 
-              <label class="indexContact__form--radio-label">
-                <input type="radio" name="type" value="maintenance">
-                保守・更新について</label>
-              <label class="indexContact__form--radio-label">
-                <input type="radio" name="type" value="other"> その他</label>
-            </div>
+                <div class="">
+                  <label class="indexContact__form--radio-label">
+                    <input type="radio" name="type" value="maintenance">
+                    修理・メンテナンスについて
+                  </label>
+                </div>
+
+                <div class="">
+                  <label class="indexContact__form--radio-label">
+                    <input type="radio" name="type" value="purchase">商品の購入について</label>
+                </div>
+
+                <div class="">
+                  <label class="indexContact__form--radio-label">
+                    <input type="radio" name="type" value="other">その他</label>
+                </div>
+              </div>
+            </fieldset>
           </div>
 
           <div class="indexContact__form--item">
-            <label for="message" class="contact__form--label">メッセージ本文 <span
-                class="indexContact__form--required">*</span></label>
+            <label for="message" class="indexContact__form--label">
+              メッセージ本文
+              </label>
             <textarea id="message" name="message" class="indexContact__form--textarea" rows="6" required
               placeholder="ご用件を入力してください"></textarea>
           </div>
 
-          <div class="indexContact__form--item contact__form--item--center">
-            <button type="submit" class="indexContact__btn">
-              <span class="">送信</span>
-            </button>
-          </div>
+          <button type="submit" class="indexContact__btnArea ">
+            <span class="indexContact__btn c-btn--rectangle">送信</span>
+          </button>
+
         </form>
       </section>
     </main>

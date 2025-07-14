@@ -1,12 +1,18 @@
+@use "setting" as set;
+@use "variables" as var;
+
 // お問い合わせフォーム専用スタイル
-.indexContact{
-margin: 0 auto;
-padding: 80px 0;
+.indexContact {
+  margin: 0 auto;
+  padding: 80px 0;
+
+  @include set.mediaQuery(tab) {
+    margin: 0 4%;
+  }
 }
 
-.indexContact__title{
-text-align: center;
-
+.indexContact__title {
+  text-align: center;
 }
 
 .indexContact__form {
@@ -19,6 +25,11 @@ text-align: center;
   display: flex;
   flex-direction: column;
   gap: 32px;
+
+  @include set.mediaQuery(tab) {
+    padding: 24px 8px;
+    gap: 20px;
+  }
 }
 
 .indexContact__form--item {
@@ -30,43 +41,62 @@ text-align: center;
 .indexContact__form--label {
   font-size: 1.6rem;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.85);
+  color: var.$primaryFontColor;
   margin-bottom: 4px;
+
+  &::after {
+    content: "必須";
+    color: #e74c3c;
+    font-size: 1.2rem;
+    margin-left: 4px;
+  }
 }
 
-.indexContact__form--required {
-  color: #e74c3c;
-  font-size: 1.2rem;
-  margin-left: 4px;
+.indexContact__form--fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.indexContact__form--legend {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var.$primaryFontColor;
+  margin-bottom: 4px;
+
+  &::after {
+    content: "必須";
+    color: #e74c3c;
+    font-size: 1.2rem;
+    margin-left: 4px;
+  }
 }
 
 .indexContact__form--input,
 .indexContact__form--textarea {
   font-size: 1.6rem;
   padding: 12px 16px;
-  border: 1px solid #d1bfa7;
+  border: 1px solid var.$primaryColor;
   border-radius: 8px;
-  background: #fff;
-  color: #333;
+  background: var.$colorWhite;
+  color: var.$primaryFontColor;
   transition: border-color 0.3s;
+
+  @include set.mediaQuery(tab) {
+    font-size: 1.4rem;
+    padding: 10px 8px;
+  }
 }
 
 .indexContact__form--input:focus,
 .indexContact__form--textarea:focus {
-  border-color: #bfa16a;
+  border-color: var.$primaryFontColor;
   outline: none;
 }
 
 .indexContact__form--textarea {
   resize: vertical;
   min-height: 120px;
-}
-
-.indexContact__form--radio-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-top: 4px;
 }
 
 .indexContact__form--radio-label {
@@ -100,20 +130,11 @@ text-align: center;
 
 }
 
+.indexContact__btnArea {
+  text-align: center;
+}
 
-
-// ボタンは既存のc-btn, contact__btnを利用
-
-// レスポンシブ
-@media (max-width: 600px) {
-  .indexContact__form {
-    padding: 24px 8px;
-    gap: 20px;
-  }
-
-  .indexContact__form--input,
-  .indexContact__form--textarea {
-    font-size: 1.4rem;
-    padding: 10px 8px;
-  }
+.indexContact__btn {
+  background-color: var.$primaryColor;
+  color: var.$primaryFontColor;
 }

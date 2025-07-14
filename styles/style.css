@@ -65,7 +65,7 @@
   width: 80px;
   height: 80px;
   background-color: transparent;
-  border: 1px solid rgba(102, 100, 95, 0.7);
+  border: 1px solid rgba(102, 100, 95, 0.8);
   border-radius: 50px;
   position: absolute;
   right: -10%;
@@ -116,7 +116,7 @@
 }
 @media screen and (max-width: 430px) {
   .c-btn--work {
-    right: 23%;
+    right: 15%;
   }
 }
 
@@ -132,10 +132,53 @@
     right: -110%;
   }
 }
+@media screen and (max-width: 430px) {
+  .c-btn--text--work::after {
+    right: -60%;
+  }
+}
+
+.c-btn--rectangle {
+  display: inline-block;
+  padding: 8px 80px;
+  border-radius: 50px;
+  border: 1px solid #dacfc5;
+  color: #dacfc5;
+  position: relative;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.c-btn--rectangle:hover {
+  background-color: rgba(240, 237, 233, 0.7);
+  transition: 1s;
+  color: #797163;
+}
+
+.c-btn--rectangle::after {
+  border: 1px solid #dacfc5;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  width: 72px;
+  height: 0.5px;
+  transition: 1s;
+}
+
+.c-btn--rectangle:hover::after {
+  right: -50px;
+  transition: 1s;
+}
 
 .indexContact {
   margin: 0 auto;
   padding: 80px 0;
+}
+@media screen and (max-width: 768px) {
+  .indexContact {
+    margin: 0 4%;
+  }
 }
 
 .indexContact__title {
@@ -153,6 +196,12 @@
   flex-direction: column;
   gap: 32px;
 }
+@media screen and (max-width: 768px) {
+  .indexContact__form {
+    padding: 24px 8px;
+    gap: 20px;
+  }
+}
 
 .indexContact__form--item {
   display: flex;
@@ -163,11 +212,30 @@
 .indexContact__form--label {
   font-size: 1.6rem;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.85);
+  color: #66645F;
   margin-bottom: 4px;
 }
+.indexContact__form--label::after {
+  content: "必須";
+  color: #e74c3c;
+  font-size: 1.2rem;
+  margin-left: 4px;
+}
 
-.indexContact__form--required {
+.indexContact__form--fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.indexContact__form--legend {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #66645F;
+  margin-bottom: 4px;
+}
+.indexContact__form--legend::after {
+  content: "必須";
   color: #e74c3c;
   font-size: 1.2rem;
   margin-left: 4px;
@@ -177,29 +245,29 @@
 .indexContact__form--textarea {
   font-size: 1.6rem;
   padding: 12px 16px;
-  border: 1px solid #d1bfa7;
+  border: 1px solid #dacfc5;
   border-radius: 8px;
-  background: #fff;
-  color: #333;
+  background: #fcfaf9;
+  color: #66645F;
   transition: border-color 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .indexContact__form--input,
+  .indexContact__form--textarea {
+    font-size: 1.4rem;
+    padding: 10px 8px;
+  }
 }
 
 .indexContact__form--input:focus,
 .indexContact__form--textarea:focus {
-  border-color: #bfa16a;
+  border-color: #66645F;
   outline: none;
 }
 
 .indexContact__form--textarea {
   resize: vertical;
   min-height: 120px;
-}
-
-.indexContact__form--radio-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-top: 4px;
 }
 
 .indexContact__form--radio-label {
@@ -232,17 +300,15 @@
   max-width: 100%;
 }
 
-@media (max-width: 600px) {
-  .indexContact__form {
-    padding: 24px 8px;
-    gap: 20px;
-  }
-  .indexContact__form--input,
-  .indexContact__form--textarea {
-    font-size: 1.4rem;
-    padding: 10px 8px;
-  }
+.indexContact__btnArea {
+  text-align: center;
 }
+
+.indexContact__btn {
+  background-color: #dacfc5;
+  color: #66645F;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
@@ -276,6 +342,8 @@ a:hover {
   align-items: center;
   padding: 0 24px;
   position: relative;
+  border-bottom: 1px solid #c1baa8;
+  margin-bottom: 24px;
 }
 
 @media screen and (max-width: 768px) {
@@ -667,6 +735,7 @@ a:hover {
   background-size: cover;
   background-attachment: fixed;
   filter: brightness(0.6);
+  object-fit: cover;
 }
 
 .work {
@@ -949,8 +1018,11 @@ a:hover {
 .footer {
   text-align: center;
   background-color: #797163;
-  color: #64625e;
   padding: 8px 0;
+}
+
+.footer__copyright {
+  color: #66645F;
 }
 
 .to-top-btn {
@@ -961,6 +1033,7 @@ a:hover {
   height: 80px;
   border-radius: 50%;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  background-color: rgba(240, 237, 233, 0.7);
   cursor: pointer;
   transition: opacity 0.4s, box-shadow 0.3s, transform 0.3s;
   z-index: 1000;

@@ -96,4 +96,14 @@ toTopBtn.addEventListener('click', (e) => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+// 動画のパララックス効果
+const caseUnderVideo = document.querySelector('.case__underVideo');
+if (caseUnderVideo) {
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const rate = scrolled * -0.5; // パララックス効果の強さ（負の値で逆方向に移動）
+    caseUnderVideo.style.transform = `translateY(${rate}px)`;
+  });
+}
+
 });

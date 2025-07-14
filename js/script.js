@@ -141,12 +141,12 @@ slideLeft.forEach((leftEl, i) => {
       const tl = gsap.timeline();
       tl.fromTo(
         leftEl,
-        { x: -50, opacity: 0},
+        { x: -100, opacity: 0},
         { x: 0, opacity: 1, duration: 1.5, ease: 'expo.power4' }
       )
       .fromTo(
         rightEl,
-        { x: 50, opacity: 0 },
+        { x: 100, opacity: 0 },
         { x: 0, opacity: 1, duration: 1, ease: 'expo.power4' },
         ">" // 左が終わったらすぐ右
       );

@@ -7,6 +7,44 @@ document.addEventListener('DOMContentLoaded', function () {
     load.classList.add('close')
   }, 700);
 
+
+  // ハンバーガーメニューの機能
+const hamburgerMenu = document.getElementById('header__hamburgerMenu');
+const headerNav = document.querySelector('.header__nav');
+const navLinks = document.querySelectorAll('.header__navItem a');
+
+// ハンバーガーメニューの開閉
+hamburgerMenu.addEventListener('click', function() {
+  hamburgerMenu.classList.toggle('active');
+  headerNav.classList.toggle('active');
+  
+  // メニューが開いている時はスクロールを無効化
+  if (headerNav.classList.contains('active')) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+});
+
+// ナビゲーションリンクをクリックした時にメニューを閉じる
+navLinks.forEach(link => {
+  link.addEventListener('click', function() {
+    hamburgerMenu.classList.remove('active');
+    headerNav.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+});
+
+// メニュー外をクリックした時にメニューを閉じる
+document.addEventListener('click', function(e) {
+  if (!hamburgerMenu.contains(e.target) && !headerNav.contains(e.target)) {
+    hamburgerMenu.classList.remove('active');
+    headerNav.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+});
+
+
 // ヒーローセクションのSwiper
 const heroSwiper = new Swiper('.section.hero .swiper', {
   loop: true,
@@ -52,41 +90,6 @@ const productSwiper = new Swiper('.product-swiper', {
 
 
 
-// ハンバーガーメニューの機能
-const hamburgerMenu = document.getElementById('header__hamburgerMenu');
-const headerNav = document.querySelector('.header__nav');
-const navLinks = document.querySelectorAll('.header__navItem a');
-
-// ハンバーガーメニューの開閉
-hamburgerMenu.addEventListener('click', function() {
-  hamburgerMenu.classList.toggle('active');
-  headerNav.classList.toggle('active');
-  
-  // メニューが開いている時はスクロールを無効化
-  if (headerNav.classList.contains('active')) {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = '';
-  }
-});
-
-// ナビゲーションリンクをクリックした時にメニューを閉じる
-navLinks.forEach(link => {
-  link.addEventListener('click', function() {
-    hamburgerMenu.classList.remove('active');
-    headerNav.classList.remove('active');
-    document.body.style.overflow = '';
-  });
-});
-
-// メニュー外をクリックした時にメニューを閉じる
-document.addEventListener('click', function(e) {
-  if (!hamburgerMenu.contains(e.target) && !headerNav.contains(e.target)) {
-    hamburgerMenu.classList.remove('active');
-    headerNav.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-});
 
 
 // トップへ戻るボタンの表示・動作
@@ -121,7 +124,7 @@ fade.forEach(el => {
       y: 0, 
       opacity: 1, 
       duration: 2.5, 
-      ease: 'power4.inout',
+      ease: 'power4.inOut',
       scrollTrigger: {
         trigger: el,
         start: 'top 70%',

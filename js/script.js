@@ -1,6 +1,11 @@
-// 'use strict'
+'use strict'
 
 document.addEventListener('DOMContentLoaded', function () {
+  //ローディングアニメーション
+  const load = document.querySelector('.load')
+  setTimeout(() => {
+    load.classList.add('close')
+  }, 700);
 
 // ヒーローセクションのSwiper
 const heroSwiper = new Swiper('.section.hero .swiper', {
@@ -44,6 +49,8 @@ const productSwiper = new Swiper('.product-swiper', {
   }
   // 必要に応じてページネーションやナビゲーションも追加可能
 });
+
+
 
 // ハンバーガーメニューの機能
 const hamburgerMenu = document.getElementById('header__hamburgerMenu');
@@ -96,14 +103,53 @@ toTopBtn.addEventListener('click', (e) => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// 動画のパララックス効果
-const caseUnderVideo = document.querySelector('.case__underVideo');
-if (caseUnderVideo) {
-  window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const rate = scrolled * -0.5; // パララックス効果の強さ（負の値で逆方向に移動）
-    caseUnderVideo.style.transform = `translateY(${rate}px)`;
-  });
-}
+});
 
+//フェードアニメーション
+gsap.registerPlugin(ScrollTrigger);
+const fade = gsap.utils.toArray('.fade')
+const slideLeft = gsap.utils.toArray('.slideLeft')
+const slideRight = gsap.utils.toArray('.slideRight')
+
+fade.forEach(el => {
+  gsap.fromTo(el, {
+    y: 40, 
+    opacity: 0, 
+    duration: 3, 
+    ease:'power4.inOut' },
+    {
+      y: 0, 
+      opacity: 1, 
+      duration: 2.5, 
+      ease: 'power4.inout',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 70%',
+        // markers: true,
+      },
+    });
+});
+
+slideLeft.forEach((leftEl, i) => {
+  const rightEl = slideRight[i];
+  if (!rightEl) return;
+
+  ScrollTrigger.create({
+    trigger: leftEl,
+    start: 'top 70%',
+    onEnter: () => {
+      const tl = gsap.timeline();
+      tl.fromTo(
+        leftEl,
+        { x: -50, opacity: 0},
+        { x: 0, opacity: 1, duration: 1.5, ease: 'expo.power4' }
+      )
+      .fromTo(
+        rightEl,
+        { x: 50, opacity: 0 },
+        { x: 0, opacity: 1, duration: 1, ease: 'expo.power4' },
+        ">" // 左が終わったらすぐ右
+      );
+    }
+  });
 });

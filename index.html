@@ -24,10 +24,16 @@
 
 <body>
   <div class="back">
+
     <header class="header">
+        <!-- ローディングアニメーション -->
+      <div class="load">
+        <img class="load__img" src="img/logo.png" alt="" loading="lazy">
+      </div>
+
       <h1 class="header__logoArea">
         <a href="index.html">
-          <img class="header__logo--img" src="img/logo.png" alt="ロゴ">
+          <img class="header__logo--img" src="img/logo.png" alt="ロゴ" loading="lazy">
         </a>
       </h1>
       <nav class="header__nav">
@@ -47,20 +53,30 @@
       </button>
     </header>
 
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <ul class="breadcrumb__list">
+        <li class="breadcrumb__item"><a href="index.html">HOME</a></li>
+        <li class="breadcrumb__item">トップページ</li>
+      </ul>
+    </nav>
+
+    
+    <!-- セクション -->
     <main class="main">
       <section class="section hero">
         <div class="swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img class="swiper-slide__img" src="img/women01.jpg" alt="写真1"></div>
-            <div class="swiper-slide"><img class="swiper-slide__img" src="img/women02.jpg" alt="写真2"></div>
-            <div class="swiper-slide"><img class="swiper-slide__img" src="img/women03.jpg" alt="写真3"></div>
-            <div class="swiper-slide"><img class="swiper-slide__img" src="img/women04.jpg" alt="写真4"></div>
+            <div class="swiper-slide"><img class="swiper-slide__img" src="img/women01.jpg" alt="写真1" loading="lazy"></div>
+            <div class="swiper-slide"><img class="swiper-slide__img" src="img/women02.jpg" alt="写真2" loading="lazy"></div>
+            <div class="swiper-slide"><img class="swiper-slide__img" src="img/women03.jpg" alt="写真3" loading="lazy"></div>
+            <div class="swiper-slide"><img class="swiper-slide__img" src="img/women04.jpg" alt="写真4" loading="lazy"></div>
           </div>
         </div>
       </section>
 
       <section id="vision" class="section about c-wrapper">
-        <h2 class="c-title c-title--l--white">
+        <h2 class="c-title c-title--l--white fade">
           ABOUT
         </h2>
         <p class="about__caption">
@@ -68,25 +84,25 @@
         </p>
 
 
-        <div href="" class="c-btn">
-          <a href="" class="c-btn--text c-btn--tabSize--margin">
+        <a href="" class="c-btn">
+          <div class="c-btn--text c-btn--tabSize--margin">
             ABOUT
-          </a>
-          <div class="c-btn--arrow">
-            <img class="c-btn--arrowImg" src="img/arrow.png" alt="">
           </div>
-        </div>
+          <div class="c-btn--arrow">
+            <img class="c-btn--arrowImg" src="img/arrow.png" alt="" loading="lazy">
+          </div>
+        </a>
       </section>
 
       <section id="item" class="section product">
-        <h2 class="c-title--s">
+        <h2 class="c-title--s fade">
           <span class="c-title--s--en">PRODUCT</span>
-          <spa class="c-title--s--ja">商品</spa>
+          <span class="c-title--s--ja">商品</span>
         </h2>
         <div class="swiper product-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img class="swiper-slide__img" src="img/01.jpg" alt="商品1">
+              <img class="swiper-slide__img" src="img/01.jpg" alt="商品1" loading="lazy">
               <div class="product-info">
                 <div class="product-name">シルバーネックレス</div>
                 <div class="product-caption">上品で洗練されたデザインのシルバーネックレス</div>
@@ -94,7 +110,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <img class="swiper-slide__img" src="img/02.jpg" alt="商品2">
+              <img class="swiper-slide__img" src="img/02.jpg" alt="商品2" loading="lazy">
               <div class="product-info">
                 <div class="product-name">ゴールドリング</div>
                 <div class="product-caption">エレガントなデザインの18金リング</div>
@@ -102,7 +118,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <img class="swiper-slide__img" src="img/03.jpg" alt="商品3">
+              <img class="swiper-slide__img" src="img/03.jpg" alt="商品3" loading="lazy">
               <div class="product-info">
                 <div class="product-name">パールイヤリング</div>
                 <div class="product-caption">天然パールを使用した上品なイヤリング</div>
@@ -110,7 +126,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <img class="swiper-slide__img" src="img/04.jpg" alt="商品4">
+              <img class="swiper-slide__img" src="img/04.jpg" alt="商品4" loading="lazy">
               <div class="product-info">
                 <div class="product-name">ダイヤモンドブレスレット</div>
                 <div class="product-caption">美しいダイヤモンドが輝くエレガントなブレスレット</div>
@@ -118,7 +134,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <img class="swiper-slide__img" src="img/05.jpg" alt="商品5">
+              <img class="swiper-slide__img" src="img/05.jpg" alt="商品5" loading="lazy">
               <div class="product-info">
                 <div class="product-name">サファイアペンダント</div>
                 <div class="product-caption">神秘的なサファイアが印象的なペンダント</div>
@@ -135,30 +151,30 @@
       <section class="section case">
         <div class="case__wrapper">
           <figure class="case__left">
-            <h3 class="case__leftTitle">
+            <h3 class="case__leftTitle fade">
               シルバーネックレス
             </h3>
-            <figcaption class="case__leftText">
+            <figcaption class="case__leftText fade">
               925シルバーを使用した上品で洗練されたデザインのネックレスです。
               シンプルながら存在感のあるデザインで、どんな服装にも合わせやすく、
               特別な日から日常使いまで幅広くお楽しみいただけます。
             </figcaption>
 
             <div class="case__leftImgArea">
-              <img class="case__leftImg" src="img/01.jpg" alt="">
+              <img class="case__leftImg slideLeft" src="img/01.jpg" alt="" loading="lazy">
               <div class="img-cover"></div>
             </div>
           </figure>
 
           <figure class="case__right">
             <div class="case__rightArea">
-              <h4 class="case__rightTitle">
+              <h4 class="case__rightTitle fade">
                 ゴールドリング
               </h4>
-              <div class="case__rightImgArea">
-                <img class="case__rightImg" src="img/04.jpg" alt="">
+              <div class="case__rightImgArea slideRight">
+                <img class="case__rightImg" src="img/04.jpg" alt="" loading="lazy">
               </div>
-              <figcaption class="case__rightText">
+              <figcaption class="case__rightText fade">
                 18金を使用したエレガントなデザインのリングです。
                 シンプルで上品なデザインで、結婚指輪や記念品としても人気があります。
               </figcaption>
@@ -177,21 +193,21 @@
         <div class="c-wrapper work__inner">
 
           <div class="work__contentArea">
-            <h2 class="c-title c-title--l--black">
+            <h2 class="c-title c-title--l--black fade">
               Work
             </h2>
-            <p class="work__caption">
+            <p class="work__caption fade">
               私たちのアクセサリーは、お客様の個性を輝かせ、特別な瞬間をより美しく彩ります。
               高品質な素材と職人の技で作り上げた、一生の宝物となる逸品をお届けします。
             </p>
 
             <ul class="work__flex">
               <li class="work__item">
-                <div class="work__itemImgArea">
-                  <img class="work__itemImg work__itemImg--normal" src="img/01.jpg" alt="作品1">
-                  <img class="work__itemImg work__itemImg--hover" src="img/work-01.jpg" alt="作品1詳細">
+                <div class="work__itemImgArea slideLeft">
+                  <img class="work__itemImg work__itemImg--normal" src="img/01.jpg" alt="作品1" loading="lazy">
+                  <img class="work__itemImg work__itemImg--hover" src="img/work-01.jpg" alt="作品1詳細" loading="lazy">
                 </div>
-                <p class="works__text">
+                <p class="works__text fade">
                   シルバーネックレスの制作工程では、まず925シルバーの素材選びから始まります。
                   職人が一つひとつ手作業で研磨し、細部まで丁寧に仕上げることで、
                   上質な輝きと美しいフォルムを実現しています。
@@ -199,11 +215,11 @@
               </li>
 
               <li class="work__item">
-                <div class="work__itemImgArea">
-                  <img class="work__itemImg work__itemImg--normal" src="img/05.jpg" alt="作品2">
-                  <img class="work__itemImg work__itemImg--hover" src="img/work-02.jpg" alt="作品2詳細">
+                <div class="work__itemImgArea slideRight">
+                  <img class="work__itemImg work__itemImg--normal" src="img/05.jpg" alt="作品2" loading="lazy">
+                  <img class="work__itemImg work__itemImg--hover" src="img/work-02.jpg" alt="作品2詳細" loading="lazy">
                 </div>
-                <p class="">
+                <p class="works__text fade">
                   サファイアペンダントの制作では、天然石の特性を活かした石留め技術が重要です。
                   職人が熟練の技で石をセットし、光の反射を計算した角度で配置することで、
                   サファイアの美しい青い輝きを最大限に引き出しています。
@@ -214,22 +230,22 @@
           </div>
         </div>
 
-        <div class="c-btn c-btn--work">
-          <a href="" class="c-btn--text c-btn--text--work">
+        <a href="" class="c-btn c-btn--work">
+          <div class="c-btn--text c-btn--text--work">
             WORK
-          </a>
-          <div class="c-btn--arrow">
-            <img class="c-btn--arrowImg" src="img/arrow.png" alt="">
           </div>
-        </div>
+          <div class="c-btn--arrow">
+            <img class="c-btn--arrowImg" src="img/arrow.png" alt="" loading="lazy">
+          </div>
+        </a>
 
       </section>
 
 
       <section id="news" class="section news c-wrapper">
-        <h2 class="c-title--s">
+        <h2 class="c-title--s fade">
           <span class="c-title--s--en"> NEWS</span>
-          <spa class="c-title--s--ja">お知らせ</spa>
+          <span class="c-title--s--ja">お知らせ</span>
         </h2>
 
         <ul class="news__list">
@@ -279,14 +295,14 @@
           </li>
         </ul>
 
-        <div href="" class="c-btn">
-          <a href="" class="c-btn--text c-btn--tabSize--margin">
+        <a href="" class="c-btn">
+          <div class="c-btn--text c-btn--tabSize--margin">
             NEWS
-          </a>
-          <div class="c-btn--arrow">
-            <img class="c-btn--arrowImg" src="img/arrow.png" alt="">
           </div>
-        </div>
+          <div class="c-btn--arrow">
+            <img class="c-btn--arrowImg" src="img/arrow.png" alt="" loading="lazy">
+          </div>
+        </a>
       </section>
 
     </main>
@@ -294,19 +310,19 @@
 
 
   <section id="contact" class="section contact">
-    <div class="img__bg"></div>
-    <div class="contact__bg">
+    <div class="img__bg fade"></div>
+    <div class="contact__bg fade">
 
       <div class="contact__flex c-wrapper">
         <div class="contact__left">
-          <h2 class="contact__title">
+          <h2 class="contact__title fade">
             CONTACT US
           </h2>
           <p class="contact__text">
             アクセサリーについてのご質問やご注文は、お気軽にお問い合わせください。
-            お客様一人ひとりに寄り添ったサービスを心がけております。
+            お客様一人ひとつに寄り添ったサービスを心がけております。
           </p>
-          
+
           <div>
             <a class="c-btn--rectangle" href="contact.html">CONTACT</a>
           </div>
@@ -317,7 +333,7 @@
           <div class="contact__company">ジュエリー株式会社</div>
           <div class="contact__address">〒123-4567 東京都渋谷区○○1-2-3</div>
           <div class="contact__tel">TEL: 03-1234-5678</div>
-          <div class="contact__email">Email: <a href="mailto:info@totocaffee.co.jp">info@Jewelry.co.jp</a></div>
+          <div class="contact__email">Email: <a href="mailto:info@Jewelry.co.jp">info@Jewelry.co.jp</a></div>
           <div class="contact__sns">
             <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i
                 class="fab fa-instagram"></i></a>
@@ -343,7 +359,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="script.js"></script>
+  <script src="/js/script.js" defer></script>
 </body>
 
 </html>

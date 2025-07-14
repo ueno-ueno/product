@@ -152,23 +152,7 @@
 .c-btn--rectangle:hover {
   background-color: rgba(240, 237, 233, 0.7);
   transition: 1s;
-  color: #797163;
-}
-
-.c-btn--rectangle::after {
-  border: 1px solid #dacfc5;
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -30px;
-  width: 72px;
-  height: 0.5px;
-  transition: 1s;
-}
-
-.c-btn--rectangle:hover::after {
-  right: -50px;
-  transition: 1s;
+  color: rgba(102, 100, 95, 0.8);
 }
 
 .indexContact {
@@ -333,6 +317,47 @@ a:hover {
 
 .back {
   background-color: #dacfc5;
+  position: relative;
+  max-width: 100%;
+}
+
+.load {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(218, 207, 197, 0.95);
+  z-index: 3000;
+  transition: 0.5s ease-in-out;
+}
+
+.load__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+}
+
+@keyframes logoUpFade {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -90%) scale(1.2);
+  }
+}
+.load.close {
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s ease-in-out;
+}
+
+.load.close .load__img {
+  animation: logoUpFade 1.2s ease-in-out forwards;
 }
 
 .header {
@@ -343,7 +368,7 @@ a:hover {
   padding: 0 24px;
   position: relative;
   border-bottom: 1px solid #c1baa8;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 }
 
 @media screen and (max-width: 768px) {
@@ -398,6 +423,7 @@ a:hover {
 
 .header__navItem {
   position: relative;
+  color: rgba(102, 100, 95, 0.8);
 }
 .header__navItem a {
   font-size: clamp(1.6rem, 1.455rem + 0.73vw, 2rem);
@@ -409,7 +435,7 @@ a:hover {
   content: "";
   width: 100%;
   height: 1px;
-  background-color: #64625e;
+  background-color: rgba(102, 100, 95, 0.8);
   transform: scaleX(0);
   transition: 1s;
 }
@@ -484,6 +510,25 @@ a:hover {
 }
 .header__hamburgerMenu.active .header__hamburgerLine:nth-child(3) {
   transform: rotate(-45deg) translateY(-15px);
+}
+
+.breadcrumb {
+  margin-bottom: 16px;
+  padding-left: 16px;
+}
+
+.breadcrumb__list {
+  display: flex;
+}
+
+.breadcrumb__item {
+  position: relative;
+}
+
+.breadcrumb__item:not(:last-child)::after {
+  content: ">";
+  margin: 0 8px;
+  display: inline-block;
 }
 
 .hero {

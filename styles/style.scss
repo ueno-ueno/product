@@ -580,7 +580,7 @@ a:hover {
   align-items: stretch;
   gap: 56px;
 
-  @include set.mediaQuery(pc) {
+  @include set.mediaQuery(tab) {
     flex-direction: column;
   }
 }

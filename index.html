@@ -28,7 +28,7 @@
     <div class="load">
       <img class="load__img" src="img/logo.png" alt="" loading="lazy">
     </div>
-    
+
     <!-- ヘッダー -->
     <header class="header">
       <h1 class="header__logoArea">
@@ -67,10 +67,14 @@
       <section class="section hero">
         <div class="swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img class="swiper-slide__img" src="img/women01.jpg" alt="写真1" loading="lazy"></div>
-            <div class="swiper-slide"><img class="swiper-slide__img" src="img/women02.jpg" alt="写真2" loading="lazy"></div>
-            <div class="swiper-slide"><img class="swiper-slide__img" src="img/women03.jpg" alt="写真3" loading="lazy"></div>
-            <div class="swiper-slide"><img class="swiper-slide__img" src="img/women04.jpg" alt="写真4" loading="lazy"></div>
+            <div class="swiper-slide"><img class="swiper-slide__img" src="img/women01.jpg" alt="写真1" loading="lazy">
+            </div>
+            <div class="swiper-slide"><img class="swiper-slide__img" src="img/women02.jpg" alt="写真2" loading="lazy">
+            </div>
+            <div class="swiper-slide"><img class="swiper-slide__img" src="img/women03.jpg" alt="写真3" loading="lazy">
+            </div>
+            <div class="swiper-slide"><img class="swiper-slide__img" src="img/women04.jpg" alt="写真4" loading="lazy">
+            </div>
           </div>
         </div>
       </section>
@@ -151,18 +155,19 @@
       <section class="section case">
         <div class="case__wrapper">
           <figure class="case__left">
-            <h3 class="case__leftTitle fade">
-              シルバーネックレス
-            </h3>
-            <figcaption class="case__leftText fade">
-              925シルバーを使用した上品で洗練されたデザインのネックレスです。
-              シンプルながら存在感のあるデザインで、どんな服装にも合わせやすく、
-              特別な日から日常使いまで幅広くお楽しみいただけます。
-            </figcaption>
-
+            <div class="case__leftText">
+              <h3 class="case__leftTitle fade">
+                シルバーネックレス
+              </h3>
+              <figcaption class="case__leftText fade">
+                925シルバーを使用した上品で洗練されたデザインのネックレスです。
+                シンプルながら存在感のあるデザインで、どんな服装にも合わせやすく、
+                特別な日から日常使いまで幅広くお楽しみいただけます。
+              </figcaption>
+            </div>
+            
             <div class="case__leftImgArea">
               <img class="case__leftImg slideLeft" src="img/01.jpg" alt="" loading="lazy">
-              <!-- <div class="img-cover"></div> -->
             </div>
           </figure>
 
@@ -363,7 +368,7 @@
   <script src="js/swiper-init.js" defer></script>
   <script src="js/toTopBtn.js" defer></script>
   <script src="js/animation.js" defer></script>
-  
+
 </body>
 
 </html>
